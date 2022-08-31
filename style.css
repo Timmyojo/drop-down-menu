@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Poppins:wght@400;700&display=swap');
+
+*::after,
+*::before,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    max-height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 1100px;
+}
+
+.drop-down {
+    position: relative;
+    background-color: #e1e0e0;
+    margin: 10px auto;
+    padding: 5px 15px;
+    width: 600px;
+    max-width: 95%;
+    border-radius: 10px;
+}
+
+.drop-down .title {
+    margin-bottom: 2px;
+}
+
+.drop-down .title::after {
+    content: '>';
+    position: absolute;
+    right: 30px;
+    top: 0;
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.drop-down .page-menu {
+    border-top: 1px solid rgb(176, 176, 176);
+    display: none;
+}
+
+.drop-down .sub-menu {
+    margin-left: 25px;
+}
+
+.drop-down .page-menu p,
+.drop-down .sub-menu p {
+    padding: 5px;
+}
+
+.drop-down.active .page-menu {
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.drop-down.active .title::after {
+    content: '>';
+    position: absolute;
+    right: 30px;
+    top: 0;
+    font-size: 1.5rem;
+    transform: rotate(270deg);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
